@@ -442,15 +442,18 @@ with gr.Blocks(
 if __name__ == "__main__":
     import os
     
-    # Render configuration
-    port = int(os.getenv("PORT", 7860))
+    port = int(os.getenv("PORT", 10000))
     
-    demo.queue()  # Important for Render!
+    print(f"\n🚀 Starting on 0.0.0.0:{port}\n")
     
+    demo.queue()
+    
+    # RENDER FIX: Set share=True temporarily
     demo.launch(
         server_name="0.0.0.0",
         server_port=port,
-        share=False,
-        show_api=False,
-        favicon_path=None
+        share=True,  # ← ADD THIS for Render
+        show_error=True,
+        root_path="/",  # ← ADD THIS
+        allowed_paths=["/"]  # ← ADD THIS
     )
