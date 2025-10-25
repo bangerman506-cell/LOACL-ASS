@@ -6,4 +6,4 @@ torch==2.5.1+cpu
 sentence-transformers==2.7.0
 gradio==4.44.1
 python-dotenv==1.0.0
-pyaudioop==0.3.5
+
