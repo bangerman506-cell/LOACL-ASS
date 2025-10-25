@@ -439,15 +439,18 @@ with gr.Blocks(
     - The system learns from a knowledge base of common patterns
     """)
 
-# Launch
 if __name__ == "__main__":
     import os
-    port = int(os.getenv("PORT", 7860))
+    
+    # Render REQUIRES this port configuration
+    port = int(os.getenv("PORT", 10000))
+    
+    print(f"Starting server on 0.0.0.0:{port}")
     
     demo.launch(
         server_name="0.0.0.0",
         server_port=port,
         share=False,
         show_error=True,
-        quiet=False
+        server_name="0.0.0.0"  # CRITICAL for Render
     )
