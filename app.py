@@ -342,7 +342,7 @@ def check_status():
 # Build UI
 with gr.Blocks(
     title="AI Coding Assistant",
-    theme=gr.themes.Soft(primary_hue="indigo")
+    theme=gr.themes.Soft(primary_hue="indigo"),
     analytics_enabled=False # add this
 ) as demo:
     
