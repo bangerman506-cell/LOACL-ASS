@@ -439,15 +439,17 @@ with gr.Blocks(
     - Ask for code examples, explanations, or debugging help
     - The system learns from a knowledge base of common patterns
     """)
+if __name__ == "__main__":
+    import os
+    port = int(os.getenv("PORT", 10000))
+    # Enable queue for Render
+    demo.queue()
 
-if name == "main":.
-port = int(os.getenv("PORT", 10000))
-demo.queue()
-demo.launch(
-server_name="0.0.0.0",
-server_port=port,
-share=False,
-show_error=True
-)
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        share=False,
+        show_error=True
+    )
 
 
