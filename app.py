@@ -343,6 +343,7 @@ def check_status():
 with gr.Blocks(
     title="AI Coding Assistant",
     theme=gr.themes.Soft(primary_hue="indigo")
+    analytics_enabled=False # add this
 ) as demo:
     
     gr.Markdown("""
@@ -439,21 +440,15 @@ with gr.Blocks(
     - The system learns from a knowledge base of common patterns
     """)
 
-if __name__ == "__main__":
-    import os
-    
-    port = int(os.getenv("PORT", 10000))
-    
-    print(f"\n🚀 Starting on 0.0.0.0:{port}\n")
-    
-    demo.queue()
-    
-    # RENDER FIX: Set share=True temporarily
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=port,
-        share=True,  # ← ADD THIS for Render
-        show_error=True,
-        root_path="/",  # ← ADD THIS
-        allowed_paths=["/"]  # ← ADD THIS
-    )
+if name == "main":
+import os
+port = int(os.getenv("PORT", 10000))
+demo.queue()
+demo.launch(
+server_name="0.0.0.0",
+server_port=port,
+share=False,
+show_error=True
+)
+
+
