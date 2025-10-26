@@ -440,8 +440,7 @@ with gr.Blocks(
     - The system learns from a knowledge base of common patterns
     """)
 
-if name == "main":
-import os
+if name == "main":.
 port = int(os.getenv("PORT", 10000))
 demo.queue()
 demo.launch(
