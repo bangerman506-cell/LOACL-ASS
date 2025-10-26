@@ -4,6 +4,15 @@ qdrant-client==1.9.0
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.5.1+cpu
 sentence-transformers==2.7.0
-gradio==4.29.0
+gradio==4.19.2
+gradio-client==0.10.1
+fastapi==0.110.0
+starlette==0.36.3
+uvicorn==0.23.2
+jsonschema==4.17.3
+referencing==0.30.2
+rpds-py==0.10.6
 python-dotenv==1.0.0
-
+websockets==11.0.3
+attrs==23.2.0
+typing-extensions==4.9.0
